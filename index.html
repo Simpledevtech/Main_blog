@@ -3,64 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up & Sign In</title>
+    <title>Cute Main Blog Page</title>
     <style>
-        /* Styles from the previous example */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef4f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6f9f;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff6f9f;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff6f9f;
+            color: #fff;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #ff6f9f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: #ff4d80;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Sign Up & Sign In</h1>
+        <h1>Cute Main Blog Page</h1>
     </header>
 
     <main>
 
-        <!-- Sign Up Form -->
-        <form id="signUpForm">
-            <h2>Sign Up</h2>
-            <label for="signupUsername">Username:</label>
-            <input type="text" id="signupUsername" name="signupUsername" required>
+        <!-- Cute Image -->
+        <img src="https://placekitten.com/800/400" alt="Cute Kitten Image">
 
-            <label for="signupPassword">Password:</label>
-            <input type="password" id="signupPassword" name="signupPassword" required>
+        <h2>Cute Blog Post Title</h2>
+        <p>This is a whimsical and adorable blog post about cute things and fluffy animals. 🌈🐾</p>
 
-            <button type="submit">Sign Up</button>
-        </form>
+        <p>More cute content goes here...</p>
 
-        <!-- Sign In Form -->
-        <form id="signInForm">
-            <h2>Sign In</h2>
-            <label for="signinUsername">Username:</label>
-            <input type="text" id="signinUsername" name="signinUsername" required>
-
-            <label for="signinPassword">Password:</label>
-            <input type="password" id="signinPassword" name="signinPassword" required>
-
-            <button type="submit">Sign In</button>
-        </form>
+        <p>Check out the <a href="https://simpledevtech.github.io/Blog/main_blog.html">new blog</a> page for more cuteness!</p>
 
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const signUpForm = document.getElementById('signUpForm');
-
-            signUpForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                const username = document.getElementById('signupUsername').value;
-                const password = document.getElementById('signupPassword').value;
-
-                // Send data to the server for storage (simulate with a console log)
-                console.log(`Signing up user: ${username}`);
-                console.log(`Storing password: ${password}`);
-
-                // Redirect to the main blog page
-                window.location.href = 'main_blog.html';
-            });
-        });
-    </script>
+    <footer>
+        <p>&copy; 2024 Cute Main Blog Page</p>
+    </footer>
 
 </body>
 </html>

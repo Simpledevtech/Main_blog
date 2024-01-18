@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In</title>
+    <style>
+        /* Styles from the previous example */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sign Up & Sign In</h1>
+    </header>
+
+    <main>
+
+        <!-- Sign Up Form -->
+        <form id="signUpForm">
+            <h2>Sign Up</h2>
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <!-- Sign In Form -->
+        <form id="signInForm">
+            <h2>Sign In</h2>
+            <label for="signinUsername">Username:</label>
+            <input type="text" id="signinUsername" name="signinUsername" required>
+
+            <label for="signinPassword">Password:</label>
+            <input type="password" id="signinPassword" name="signinPassword" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signUpForm = document.getElementById('signUpForm');
+
+            signUpForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const username = document.getElementById('signupUsername').value;
+                const password = document.getElementById('signupPassword').value;
+
+                // Send data to the server for storage (simulate with a console log)
+                console.log(`Signing up user: ${username}`);
+                console.log(`Storing password: ${password}`);
+
+                // Redirect to the main blog page
+                window.location.href = 'main_blog.html';
+            });
+        });
+    </script>
+
+</body>
+</html>
